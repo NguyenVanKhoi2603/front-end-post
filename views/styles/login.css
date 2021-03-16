@@ -1,0 +1,10 @@
+.form-login {
+
+  margin: 200px auto;
+  justify-content: center;
+  max-width: fit-content;
+}
+
+.form-login form {
+  padding: 50px;
+}
