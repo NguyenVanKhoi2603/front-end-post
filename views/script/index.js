@@ -16,7 +16,6 @@ $(function () {
         url: "http://localhost:3001/",
         headers: { "Authorization": `Bearer ${localStorage.getItem('token')}` },
     }).done(function (data) {
-        console.log("data: ", data);
         for (const post of data.posts.rows) {
             var idPost = post.id;
             $(".posts").append(`
@@ -73,8 +72,6 @@ $(function () {
         } else {
             window.location.href = "/login.html";
         }
-        console.log("======jqXHR======", jqXHR);
-        console.log("======exception======", exception);
     });
 });
 
@@ -121,7 +118,7 @@ function publish_Comment(id) {
             data: { content_comment: content, post_id: post_id },
         }).done(function (msg) {
             if (msg.message) {
-                $('.item').load('');
+                $('body').load('');
             }
         });
     } else {

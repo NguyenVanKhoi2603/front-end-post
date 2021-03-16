@@ -1,7 +1,6 @@
 $("#btn-login").click(function () {
     var username = $('#inputUsername').val();
     var password = $('#inputPassword').val();
-    console.log("username = " + username, "password = " + password);
     $.ajax({
         method: "POST",
         url: "http://localhost:3001/login",
